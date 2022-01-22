@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.ac.uniyar.testingcourse.bookingsystem'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.22.0'
+    testImplementation group: 'pl.pragmatists', name: 'JUnitParams', version: '1.0.6'
+}
+
+test {
+    useJUnitPlatform()
+}
